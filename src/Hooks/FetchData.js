@@ -1,28 +1,41 @@
-
 import React, { useEffect, useState } from 'react';
+
+const LoadingMessage = <p>Todos are loading...</p>;
 
 const FetchData = () => {
   const [todos, setTodos] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/todos")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("Fetching data was not successful");
+        }
+        return res.json();
+      })
       .then((data) => {
         setTodos(data);
-        console.log(data);
+        setIsLoading(false);
+        setError(null);
       })
       .catch((error) => {
-        console.log("Error fetching data:", error);
+        setError(error.message);
+        setIsLoading(false);
       });
   }, []);
+
+  const todosElement = todos && todos.map((todo) => {
+    return <p key={todo.id}>{todo.title}</p>;
+  });
 
   return (
     <div>
       <h1>Todos</h1>
-      {todos && todos.map((todo)=>{
-          return  <p>{todo.title}</p>
-        })
-      }
+      {isLoading && LoadingMessage}
+      {error && <p>{error}</p>}
+      {todosElement}
     </div>
   );
 };
