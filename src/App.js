@@ -15,7 +15,7 @@ import Form from './form/form'
 import Child from "./STATE_LIFTING/Child"
 import SignUp from "./Sign-Up/Sign-up"
 import Toggle from "./Toggle/Toggle"
-
+import FAQ from './Toggle/FAQ'
 
 function App(){
 
@@ -33,11 +33,11 @@ const data = 'I am parent App'
 
    return  <div>
     <h1 className='headingStyle'>ToDO</h1>
-      {items}
+      {/* {items} */}
 
    
    
-    <ReactBootstrap />
+    {/* <ReactBootstrap />
     <STATE />
     
     <Conditional_Rendering />
@@ -48,11 +48,11 @@ const data = 'I am parent App'
     <Form/>
     <Child data={data} onChildData={handleChildData}/>
 
-    <SignUp/>
+    <SignUp/> */}
 
-    <Toggle/>
+    {/* <Toggle/> */}
     
-
+    <FAQ/>
    
 
 
