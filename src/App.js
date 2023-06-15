@@ -16,6 +16,8 @@ import Child from "./STATE_LIFTING/Child"
 import SignUp from "./Sign-Up/Sign-up"
 import Toggle from "./Toggle/Toggle"
 import FAQ from './Toggle/FAQ'
+import UseEffect from './Hooks/UseEffect'
+
 
 function App(){
 
@@ -52,7 +54,8 @@ const data = 'I am parent App'
 
     {/* <Toggle/> */}
     
-    <FAQ/>
+    {/* <FAQ/> */}
+    <UseEffect/>
    
 
 
