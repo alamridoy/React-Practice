@@ -17,7 +17,7 @@ import SignUp from "./Sign-Up/Sign-up"
 import Toggle from "./Toggle/Toggle"
 import FAQ from './Toggle/FAQ'
 import UseEffect from './Hooks/UseEffect'
-
+import FetchData from './Hooks/FetchData'
 
 function App(){
 
@@ -55,7 +55,8 @@ const data = 'I am parent App'
     {/* <Toggle/> */}
     
     {/* <FAQ/> */}
-    <UseEffect/>
+    {/* <UseEffect/> */}
+    <FetchData/>
    
 
 
