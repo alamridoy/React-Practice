@@ -14,7 +14,7 @@ import Hooks_UseState2 from './Hooks_UseState/index2'
 import Form from './form/form'
 import Child from "./STATE_LIFTING/Child"
 import SignUp from "./Sign-Up/Sign-up"
-
+import Toggle from "./Toggle/Toggle"
 
 
 function App(){
@@ -49,6 +49,8 @@ const data = 'I am parent App'
     <Child data={data} onChildData={handleChildData}/>
 
     <SignUp/>
+
+    <Toggle/>
     
 
    
