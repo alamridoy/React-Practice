@@ -26,6 +26,9 @@ import Blogs from './Routing/Blogs'
 import Error from './Routing/Error'
 import { BrowserRouter, Routes,Route } from "react-router-dom"
 import  Navbar  from "./Navbar/Navbar"
+import Login from './Authentication/Login'
+import Registration from './Authentication/Registration'
+
 
 function App(){
 
@@ -71,7 +74,7 @@ const data = 'I am parent App'
       {/* <Post_API/> */}
 
 
-<BrowserRouter>
+{/* <BrowserRouter>
  <Navbar/>
 <Routes>
    <Route path="/" element={<Home/>}/>
@@ -79,7 +82,18 @@ const data = 'I am parent App'
    <Route path="/blogs" element={<Blogs/>}/>
    <Route path="/*" element={<Error/>}/>
 </Routes>
+</BrowserRouter> */}
+
+{/* <BrowserRouter>
+ <Navbar/>
+<Routes>
+   <Route path="/registration" element={<Registration/>}/>
+   <Route path="/login" element={<Login/>}/>
+   <Route path="/*" element={<Error/>}/>
+</Routes>
 </BrowserRouter>
+ */}
+<Registration/>
   
     </div>
  }
