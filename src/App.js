@@ -25,6 +25,7 @@ import Contact from './Routing/Contact'
 import Blogs from './Routing/Blogs'
 import Error from './Routing/Error'
 import { BrowserRouter, Routes,Route } from "react-router-dom"
+import  Navbar  from "./Navbar/Navbar"
 
 function App(){
 
@@ -71,6 +72,7 @@ const data = 'I am parent App'
 
 
 <BrowserRouter>
+ <Navbar/>
 <Routes>
    <Route path="/" element={<Home/>}/>
    <Route path="/contact" element={<Contact/>}/>
