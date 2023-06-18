@@ -18,6 +18,9 @@ import Toggle from "./Toggle/Toggle"
 import FAQ from './Toggle/FAQ'
 import UseEffect from './Hooks/UseEffect'
 import FetchData from './Hooks/FetchData'
+import Get_Api from './GET_API/Get_Api'
+import Post_API from './GET_API/Post_API'
+
 
 function App(){
 
@@ -56,10 +59,11 @@ const data = 'I am parent App'
     
     {/* <FAQ/> */}
     {/* <UseEffect/> */}
-    <FetchData/>
+    {/* <FetchData/> */}
+    {/* <Get_Api/> */}
    
 
-
+      <Post_API/>
 
 
 
