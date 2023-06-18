@@ -20,7 +20,11 @@ import UseEffect from './Hooks/UseEffect'
 import FetchData from './Hooks/FetchData'
 import Get_Api from './GET_API/Get_Api'
 import Post_API from './GET_API/Post_API'
-
+import Home from './Routing/Home'
+import Contact from './Routing/Contact'
+import Blogs from './Routing/Blogs'
+import Error from './Routing/Error'
+import { BrowserRouter, Routes,Route } from "react-router-dom"
 
 function App(){
 
@@ -63,10 +67,17 @@ const data = 'I am parent App'
     {/* <Get_Api/> */}
    
 
-      <Post_API/>
+      {/* <Post_API/> */}
 
 
-
+<BrowserRouter>
+<Routes>
+   <Route path="/" element={<Home/>}/>
+   <Route path="/contact" element={<Contact/>}/>
+   <Route path="/blogs" element={<Blogs/>}/>
+   <Route path="/*" element={<Error/>}/>
+</Routes>
+</BrowserRouter>
   
     </div>
  }
